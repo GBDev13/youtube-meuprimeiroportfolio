@@ -30,17 +30,24 @@ interface HomeProps {
 export default function Home({ projetos }: HomeProps) {
   useEffect(() => {
     Aos.init({ duration: 1500 });
-    (function () {
-      window.onload = function () {
-        new BoteriaChat().withAppKey('6133d600f9e8c30019ea2266');
-      };
-    })();
   }, []);
 
   return (
     <HomeContainer>
       <Head>
         <title>Home | Meu portfólio</title>
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+            (function () {
+              window.onload = function () {
+                  new BoteriaChat().withAppKey('6133d600f9e8c30019ea2266')
+              }
+          })();
+                  `
+          }}
+        />
       </Head>
 
       <Header />
