@@ -48,5 +48,15 @@ export default createGlobalStyle`
     margin: 0 auto;
     max-width: 85rem;
     padding: 0 1rem;
+    @media(max-width:1450px) {
+      max-width: 70rem;
+    }
+    @media(max-width:1000px) {
+      max-width: 50rem;
+    }
+    @media(max-width:700px) {
+      padding: 0 2rem;
+    }
   }
+
 `;

@@ -12,6 +12,16 @@ export const Container = styled.section`
 
     padding-bottom: 8rem;
     border-bottom: 3px solid ${({ theme }) => theme.primary};
+
+    @media (max-width: 1000px) {
+      gap: 1rem;
+    }
+
+    @media (max-width: 700px) {
+      flex-direction: column;
+      margin-top: 5rem;
+      gap: 2;
+    }
   }
 `;
 
@@ -53,5 +63,44 @@ export const ItemContainer = styled.div`
     color: ${({ theme }) => theme.textLight};
     font-size: 1rem;
     font-weight: 300;
+  }
+
+  @media (max-width: 1000px) {
+    height: 15rem;
+    padding-top: 1.5rem;
+    h1 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    &:nth-child(even) {
+      margin-top: 0;
+    }
+    height: auto;
+    padding: 2rem;
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1rem;
+    }
+    &:hover {
+      transform: translateY(0);
+    }
   }
 `;

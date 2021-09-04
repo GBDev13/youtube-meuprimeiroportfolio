@@ -16,6 +16,28 @@ export const Container = styled.section`
   > div {
     flex: 4;
   }
+
+  @media (max-width: 1450px) {
+    > img {
+      width: 30rem;
+    }
+    > div {
+      flex: 1;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    > img {
+      width: 22rem;
+    }
+  }
+
+  @media (max-width: 700px) {
+    flex-direction: column-reverse;
+    > div {
+      width: 100%;
+    }
+  }
 `;
 
 export const TextContainer = styled.section`
@@ -31,6 +53,24 @@ export const TextContainer = styled.section`
     font-size: 3rem;
     font-weight: 400;
     color: ${({ theme }) => theme.secondary};
+  }
+
+  @media (max-width: 1450px) {
+    h1 {
+      font-size: 5rem;
+    }
+    h2 {
+      font-size: 2rem;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
   }
 `;
 
@@ -50,6 +90,18 @@ export const CodeItem = styled.pre`
   width: 24rem;
   align-self: flex-start;
   transition: 1s !important;
+
+  @media (max-width: 1450px) {
+    width: 18rem;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 0.8rem;
+  }
 
   &:hover {
     filter: brightness(1.2);

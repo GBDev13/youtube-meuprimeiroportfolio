@@ -36,18 +36,6 @@ export default function Home({ projetos }: HomeProps) {
     <HomeContainer>
       <Head>
         <title>Home | Meu portfólio</title>
-
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            (function () {
-              window.onload = function () {
-                  new BoteriaChat().withAppKey('6133d600f9e8c30019ea2266')
-              }
-          })();
-                  `
-          }}
-        />
       </Head>
 
       <Header />

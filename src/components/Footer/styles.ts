@@ -40,5 +40,18 @@ export const Container = styled.footer`
         }
       }
     }
+
+    @media (max-width: 450px) {
+      button {
+        font-size: 0.9rem;
+      }
+      > section {
+        gap: 0.5rem;
+        svg {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
   }
 `;

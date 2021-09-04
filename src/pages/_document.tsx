@@ -50,27 +50,6 @@ export default class MyDocument extends Document {
 
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-
-          <link
-            rel="stylesheet"
-            href="https://app.boteria.com.br/cdn/widget_v2/widget.css"
-          />
-          <link
-            rel="stylesheet"
-            href="https://app.boteria.com.br/cdn/widget_v2/webchat.v2.css"
-          />
-          <script src="https://app.boteria.com.br/cdn/libs/showdown.min.js" />
-          <script src="https://app.boteria.com.br/cdn/libs/axios.js" />
-          <script src="https://app.boteria.com.br/cdn/libs/socket.io.js" />
-          <script src="https://app.boteria.com.br/cdn/widget_v2/widget.js" />
-          <link
-            rel="stylesheet"
-            href="https://app.boteria.com.br/cdn/widget/widget.css"
-          />
-          <script src="https://app.boteria.com.br/cdn/libs/showdown.min.js" />
-          <script src="https://app.boteria.com.br/cdn/libs/axios.js" />
-          <script src="https://app.boteria.com.br/cdn/libs/socket.io.js" />
-          <script src="https://app.boteria.com.br/cdn/widget/widget.js" />
         </Head>
         <body>
           <Main />

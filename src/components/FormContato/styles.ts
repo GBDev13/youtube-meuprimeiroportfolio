@@ -30,6 +30,20 @@ export const FormContainer = styled.section`
       background: ${({ theme }) => darken(0.05, theme.primary)};
     }
   }
+
+  @media (max-width: 700px) {
+    margin-top: 5rem;
+    > form {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 450px) {
+    > button {
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+    }
+  }
 `;
 
 export const Input = styled.input`
@@ -51,6 +65,11 @@ export const Input = styled.input`
   &::placeholder {
     color: ${({ theme }) => theme.primary};
   }
+
+  @media (max-width: 450px) {
+    padding: 1.4rem;
+    font-size: 1rem;
+  }
 `;
 
 export const TextArea = styled.textarea`
@@ -67,6 +86,15 @@ export const TextArea = styled.textarea`
   resize: none;
 
   grid-column: 1 / 3;
+
+  @media (max-width: 700px) {
+    grid-column: 1;
+  }
+
+  @media (max-width: 450px) {
+    padding: 1.4rem;
+    font-size: 1rem;
+  }
 
   &:focus {
     border-color: ${({ theme }) => theme.primary};
