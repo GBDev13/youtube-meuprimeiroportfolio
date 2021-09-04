@@ -305,6 +305,13 @@
   resolved "https://registry.npmjs.org/@opentelemetry/context-base/-/context-base-0.14.0.tgz"
   integrity sha512-sDOAZcYwynHFTbLo6n8kIbLiVF3a3BLkrmehJUyEbT9F+Smbi47kLGS2gG2g0fjBLR/Lr1InPD7kXL7FaTqEkw==
 
+"@prismicio/client@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@prismicio/client/-/client-5.1.0.tgz#f236d7fca09535d61e599872e7c38afda62b8b3c"
+  integrity sha512-LCb+arVVxJOoPM+8qfLCC/Dqse7mh+Q1k3oo5W5Uzu7vVO+vtc7CUYHxgCDkvekakYHc9407kwWu65ErZw+CPQ==
+  dependencies:
+    cross-fetch "^3.0.6"
+
 "@trysound/sax@0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@trysound/sax/-/sax-0.1.1.tgz#3348564048e7a2d7398c935d466c0414ebb6a669"
@@ -522,6 +529,15 @@ anymatch@~3.1.1:
   dependencies:
     normalize-path "^3.0.0"
     picomatch "^2.0.4"
+
+aos@^2.3.4:
+  version "2.3.4"
+  resolved "https://registry.yarnpkg.com/aos/-/aos-2.3.4.tgz#eb1c29f5c1806a197cf6323080747547edd3db8e"
+  integrity sha512-zh/ahtR2yME4I51z8IttIt4lC1Nw0ktsFtmeDzID1m9naJnWXhCoARaCgNOGXb5CLy3zm+wqmRAEgMYB5E2HUw==
+  dependencies:
+    classlist-polyfill "^1.0.3"
+    lodash.debounce "^4.0.6"
+    lodash.throttle "^4.0.1"
 
 argparse@^1.0.7:
   version "1.0.10"
@@ -904,6 +920,11 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+classlist-polyfill@^1.0.3:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/classlist-polyfill/-/classlist-polyfill-1.2.0.tgz#935bc2dfd9458a876b279617514638bcaa964a2e"
+  integrity sha1-k1vC39lFiodrJ5YXUUY4vKqWSi4=
+
 classnames@2.2.6:
   version "2.2.6"
   resolved "https://registry.npmjs.org/classnames/-/classnames-2.2.6.tgz"
@@ -1071,6 +1092,13 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+cross-fetch@^3.0.6:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-3.1.4.tgz#9723f3a3a247bf8b89039f3a380a9244e8fa2f39"
+  integrity sha512-1eAtFWdIubi6T4XPy6ei9iUFoKpUkIF971QLN8lIvvvwueI65+Nw5haMNKUwfJxabqlIIDODJKGrQ66gxC0PbQ==
+  dependencies:
+    node-fetch "2.6.1"
 
 cross-spawn@^7.0.2:
   version "7.0.3"
@@ -2479,6 +2507,11 @@ lodash.clonedeep@^4.5.0:
   resolved "https://registry.npmjs.org/lodash.clonedeep/-/lodash.clonedeep-4.5.0.tgz"
   integrity sha1-4j8/nE+Pvd6HJSnBBxhXoIblzO8=
 
+lodash.debounce@^4.0.6:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
+  integrity sha1-gteb/zCmfEAF/9XiUVMArZyk168=
+
 lodash.isplainobject@^4.0.6:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz#7c526a52d89b45c45cc690b88163be0497f550cb"
@@ -2493,6 +2526,11 @@ lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.npmjs.org/lodash.sortby/-/lodash.sortby-4.7.0.tgz"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
+
+lodash.throttle@^4.0.1, lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
 
 lodash.truncate@^4.4.2:
   version "4.4.2"
@@ -2710,6 +2748,13 @@ next@10.2.0:
     vm-browserify "1.1.2"
     watchpack "2.1.1"
 
+nextjs-progressbar@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/nextjs-progressbar/-/nextjs-progressbar-0.0.11.tgz#d8340e27f7f8cf8bca4b3ec187ebea40ea54297e"
+  integrity sha512-4JQkUHgDG6gz5r04lW06cMerKhQeXXq1RCSz2WqHMcJCDgKLCCqRokn603LlEORNpzBEY/pTZJIOlzf2eh4mFQ==
+  dependencies:
+    nprogress "^0.2.0"
+
 node-fetch@2.6.1:
   version "2.6.1"
   resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.6.1.tgz"
@@ -2777,6 +2822,11 @@ normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/normalize-path/-/normalize-path-3.0.0.tgz"
   integrity sha512-6eZs5Ls3WtCisHWp9S2GUy8dqkpGi4BVSz3GaqiE6ezub0512ESztXUwUB6C6IKbQkY2Pnb/mD4WYojCRwcwLA==
+
+nprogress@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/nprogress/-/nprogress-0.2.0.tgz#cb8f34c53213d895723fcbab907e9422adbcafb1"
+  integrity sha1-y480xTIT2JVyP8urkH6UIq28r7E=
 
 nth-check@^2.0.0:
   version "2.0.0"
@@ -3240,6 +3290,14 @@ react-refresh@0.8.3:
   version "0.8.3"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
+
+react-scroll@^1.8.4:
+  version "1.8.4"
+  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.8.4.tgz#7cc882d7058d5b5aedcd362b1de13c88d64ebe4c"
+  integrity sha512-J9rFqmdzularCXJoK2vleHVg2//y9Fs6zh7K13x7Yz3Y1kHPfQ/TTq029L09q1Gr5/5JjFLBOB2Sa3yYIqyTyQ==
+  dependencies:
+    lodash.throttle "^4.1.1"
+    prop-types "^15.7.2"
 
 react@17.0.2:
   version "17.0.2"

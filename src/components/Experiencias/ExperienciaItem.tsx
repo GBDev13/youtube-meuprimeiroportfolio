@@ -12,7 +12,7 @@ export default function ExperienciaItem({
   description
 }: ExperienciaProps) {
   return (
-    <ItemContainer>
+    <ItemContainer data-aos="fade-up">
       <h1>{year}</h1>
       <h2>{title}</h2>
       <p>{description}</p>

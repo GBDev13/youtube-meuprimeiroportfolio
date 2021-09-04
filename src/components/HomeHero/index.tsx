@@ -4,7 +4,7 @@ import picture from '../../assets/pessoa.webp';
 
 function HomeHero() {
   return (
-    <Container>
+    <Container data-aos="fade-up">
       <img src={picture} alt="Minha foto" />
       <div>
         <TextContainer>
@@ -12,7 +12,7 @@ function HomeHero() {
           <h2>Me chamo Gabriel</h2>
         </TextContainer>
         <InfosContainer>
-          <CodeItem>
+          <CodeItem data-aos="zoom-in">
             <span className="comment">//Minha apresentação</span>
             <span className="purple">Infos</span> {'\u007B'}
             <div>
@@ -23,7 +23,7 @@ function HomeHero() {
             </div>
             {'\u007D'}
           </CodeItem>
-          <CodeItem>
+          <CodeItem data-aos="zoom-in">
             <span className="purple">Cargo</span> {'\u007B'}
             <div>
               Função: <span className="blue">Dev Front-end,</span>

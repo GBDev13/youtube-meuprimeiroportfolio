@@ -7,7 +7,7 @@ export default function Form() {
   const [mensagem, setMensagem] = useState('');
 
   return (
-    <FormContainer>
+    <FormContainer data-aos="fade-up">
       <form>
         <Input
           placeholder="Nome"

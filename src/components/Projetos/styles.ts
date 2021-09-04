@@ -46,8 +46,14 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
   align-items: flex-end;
 
   &:hover {
-    > section > div.text {
-      right: -12rem;
+    > section {
+      > div.text {
+        right: -12rem;
+      }
+
+      > div.overlay {
+        opacity: 0.2;
+      }
     }
 
     > button a {
@@ -85,6 +91,7 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
       height: 100%;
       background: ${({ theme }) => theme.gradient};
       opacity: 0.5;
+      transition: 0.5s;
     }
 
     > div.text {

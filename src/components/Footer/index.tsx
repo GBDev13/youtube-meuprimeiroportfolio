@@ -3,6 +3,7 @@ import {
   AiOutlineGithub,
   AiFillLinkedin
 } from 'react-icons/ai';
+import * as Scroll from 'react-scroll';
 import { Container } from './styles';
 
 function Footer() {
@@ -10,10 +11,17 @@ function Footer() {
     window.open(url);
   }
 
+  const scroll = Scroll.animateScroll;
+  function handleScrollTop() {
+    scroll.scrollToTop();
+  }
+
   return (
     <Container>
       <div className="container">
-        <p>Voltar ao topo</p>
+        <button type="button" onClick={handleScrollTop}>
+          Voltar ao topo
+        </button>
         <section>
           <AiOutlineTwitter
             onClick={() => handleRedirect('https://twitter.com')}

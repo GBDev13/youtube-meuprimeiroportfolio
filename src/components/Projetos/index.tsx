@@ -3,30 +3,34 @@ import SectionTitle from '../SectionTitle';
 import ProjetoItem from './ProjetoItem';
 import { Container } from './styles';
 
-function Projetos() {
+interface IProjeto {
+  slug: string;
+  title: string;
+  type: string;
+  description: string;
+  link: string;
+  thumbnail: string;
+}
+
+interface ProjetosProps {
+  projetos: IProjeto[];
+}
+
+function Projetos({ projetos }: ProjetosProps) {
   return (
     <Container>
       <SectionTitle title="Ultimos Projetos" />
 
       <section>
-        <ProjetoItem
-          title="Projeto 01"
-          type="Website"
-          slug="projeto01"
-          img="https://zippypixels.com/wp-content/uploads/2015/09/01-Free-perspective-website-mockup-824x542.jpg"
-        />
-        <ProjetoItem
-          title="Projeto 01"
-          type="Website"
-          slug="projeto01"
-          img="https://zippypixels.com/wp-content/uploads/2015/09/01-Free-perspective-website-mockup-824x542.jpg"
-        />
-        <ProjetoItem
-          title="Projeto 01"
-          type="Website"
-          slug="projeto01"
-          img="https://zippypixels.com/wp-content/uploads/2015/09/01-Free-perspective-website-mockup-824x542.jpg"
-        />
+        {projetos.slice(0, 3).map(projeto => (
+          <ProjetoItem
+            key={projeto.slug}
+            title={projeto.title}
+            type={projeto.type}
+            slug={projeto.slug}
+            img={projeto.thumbnail}
+          />
+        ))}
       </section>
       <button type="button">
         <Link href="/projetos">

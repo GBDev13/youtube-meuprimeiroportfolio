@@ -14,11 +14,12 @@ export const Container = styled.footer`
     align-items: center;
     justify-content: space-between;
 
-    p {
+    button {
+      background: none;
+      border: none;
       color: ${({ theme }) => theme.secondary};
       text-transform: uppercase;
       font-weight: 300;
-      cursor: pointer;
       font-size: 1.2rem;
     }
 

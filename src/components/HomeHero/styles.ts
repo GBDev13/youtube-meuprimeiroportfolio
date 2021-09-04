@@ -49,7 +49,7 @@ export const CodeItem = styled.pre`
   color: #fff;
   width: 24rem;
   align-self: flex-start;
-  transition: 0.5s;
+  transition: 1s !important;
 
   &:hover {
     filter: brightness(1.2);

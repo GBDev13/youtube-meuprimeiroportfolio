@@ -8,7 +8,7 @@ interface SectionTitleProps {
 
 function SectionTitle({ title, description }: SectionTitleProps) {
   return (
-    <Container>
+    <Container data-aos="fade-right">
       <h1>#{title}</h1>
       {description && <h2>{description}</h2>}
     </Container>
