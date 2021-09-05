@@ -13,21 +13,25 @@ export const FormContainer = styled.section`
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 1fr;
-  }
 
-  > button {
-    margin-top: 1rem;
-    border: none;
-    padding: 1rem 2.5rem;
-    color: #fff;
-    font-weight: 300;
-    font-size: 1.2rem;
-    border-radius: 0.5rem;
-    background: ${({ theme }) => theme.primary};
-    transition: 0.5s;
+    > button {
+      border: none;
+      padding: 1rem 2.5rem;
+      color: #fff;
+      font-weight: 300;
+      font-size: 1.2rem;
+      border-radius: 0.5rem;
+      background: ${({ theme }) => theme.primary};
+      transition: 0.5s;
+      width: fit-content;
 
-    &:hover {
-      background: ${({ theme }) => darken(0.05, theme.primary)};
+      &:disabled {
+        opacity: 0.5;
+      }
+
+      &:not(:disabled):hover {
+        background: ${({ theme }) => darken(0.05, theme.primary)};
+      }
     }
   }
 
@@ -39,7 +43,7 @@ export const FormContainer = styled.section`
   }
 
   @media (max-width: 450px) {
-    > button {
+    > form > button {
       padding: 0.8rem 1.5rem;
       font-size: 1rem;
     }
