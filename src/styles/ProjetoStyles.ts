@@ -17,6 +17,7 @@ export const ProjetoContainer = styled.div`
       color: ${({ theme }) => theme.textLight};
       font-size: 1.5rem;
       font-weight: 300;
+      text-align: justify;
     }
 
     button {
@@ -36,6 +37,21 @@ export const ProjetoContainer = styled.div`
         color: #fff;
         font-size: 1.5rem;
         font-weight: 300;
+      }
+    }
+
+    @media (max-width: 700px) {
+      padding: 0 2.5rem;
+
+      p {
+        font-size: 1rem;
+      }
+
+      button {
+        padding: 0.7rem 2rem;
+        a {
+          font-size: 0.9rem;
+        }
       }
     }
   }

@@ -13,5 +13,13 @@ export const ProjetosContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
+
+    @media (max-width: 1000px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 550px) {
+      grid-template-columns: 1fr;
+    }
   }
 `;
