@@ -3,7 +3,6 @@ import {
   AiOutlineGithub,
   AiFillLinkedin
 } from 'react-icons/ai';
-import * as Scroll from 'react-scroll';
 import { Container } from './styles';
 
 function Footer() {
@@ -11,9 +10,12 @@ function Footer() {
     window.open(url);
   }
 
-  const scroll = Scroll.animateScroll;
   function handleScrollTop() {
-    scroll.scrollToTop();
+    // scroll.scrollToTop();
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
   }
 
   return (
