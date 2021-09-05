@@ -30,6 +30,12 @@ export default function Projeto({ projeto }: ProjetoProps) {
     <ProjetoContainer>
       <Head>
         <title>{projeto.title} | Meu portfólio</title>
+        <meta name="description" content={projeto.description} />
+        <meta property="og:image" content={projeto.thumbnail} />
+        <meta property="og:image:secure_url" content={projeto.thumbnail} />
+        <meta name="twitter:image" content={projeto.thumbnail} />
+        <meta name="twitter:image:src" content={projeto.thumbnail} />
+        <meta property="og:description" content={projeto.description} />
       </Head>
 
       <Header />

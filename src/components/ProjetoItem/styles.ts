@@ -19,6 +19,7 @@ export const Container = styled.div<ContainerProps>`
     border: 1px solid ${({ theme }) => theme.border};
     transition: 0.5s;
     cursor: pointer;
+    overflow: hidden;
 
     &:hover {
       border-color: ${({ theme }) => theme.primary};
