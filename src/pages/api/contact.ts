@@ -17,8 +17,6 @@ const transporter = nodemailer.createTransport({
 });
 
 const mailer = ({ senderMail, name, text }) => {
-  console.log(email, emailPass);
-
   const from = `${name} <${senderMail}>`;
   const message = {
     from,
