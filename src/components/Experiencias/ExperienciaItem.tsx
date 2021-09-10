@@ -13,9 +13,11 @@ export default function ExperienciaItem({
 }: ExperienciaProps) {
   return (
     <ItemContainer data-aos="fade-up">
-      <h1>{year}</h1>
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <div>
+        <h1>{year}</h1>
+        <h2>{title}</h2>
+        <p>{description}</p>
+      </div>
     </ItemContainer>
   );
 }
