@@ -45,6 +45,7 @@ export const Container = styled.footer`
       button {
         font-size: 0.9rem;
       }
+
       > section {
         gap: 0.5rem;
         svg {

@@ -26,6 +26,7 @@ export default function Projeto({ projeto }: ProjetoProps) {
   if (router.isFallback) {
     return <LoadingScreen />;
   }
+
   return (
     <ProjetoContainer>
       <Head>
@@ -44,6 +45,7 @@ export default function Projeto({ projeto }: ProjetoProps) {
         type={projeto.type}
         imgUrl={projeto.thumbnail}
       />
+
       <main>
         <p>{projeto.description}</p>
         <button type="button">
@@ -57,7 +59,7 @@ export default function Projeto({ projeto }: ProjetoProps) {
 export const getStaticPaths: GetStaticPaths = async () => {
   const prismic = getPrismicClient();
   const projetos = await prismic.query([
-    Prismic.Predicates.at('document.type', 'projeto')
+    Prismic.predicates.at('document.type', 'pro')
   ]);
 
   const paths = projetos.results.map(projeto => ({
@@ -76,7 +78,7 @@ export const getStaticProps: GetStaticProps = async context => {
   const prismic = getPrismicClient();
   const { slug } = context.params;
 
-  const response = await prismic.getByUID('projeto', String(slug), {});
+  const response = await prismic.getByUID('pro', String(slug), {});
 
   const projeto = {
     slug: response.uid,

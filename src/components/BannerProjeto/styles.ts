@@ -30,19 +30,19 @@ export const Container = styled.div<ContainerProps>`
 
   > div.overlay {
     position: absolute;
+    left: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     background: ${({ theme }) => theme.gradient};
-    opacity: 0.8;
+    opacity: 0.7;
+    transition: 0.5s;
   }
 
   @media (max-width: 700px) {
     padding: 2rem 2.5rem;
     height: 20rem;
+
     section {
       h1 {
         font-size: 1.8rem;

@@ -19,7 +19,6 @@ export default function NavLink({ title, path, includes = false }: Props) {
   }
 
   const isActive = verifyIfIsActive();
-
   return (
     <NavLinkContainer isActive={isActive}>
       <Link href={path}>

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { sendContactMail } from '../../services/sendMail';
-import { FormContainer, Input, TextArea } from './styles';
 import theme from '../../styles/theme';
+import { FormContainer, Input, TextArea } from './styles';
 
 export default function Form() {
   const [nome, setNome] = useState('');
@@ -13,6 +13,7 @@ export default function Form() {
 
   async function handleSubmit(event) {
     event.preventDefault();
+
     if (!nome || !email || !mensagem) {
       toast('Preencha todos os campos para enviar sua mensagem!', {
         style: {
@@ -29,13 +30,14 @@ export default function Form() {
       setNome('');
       setEmail('');
       setMensagem('');
-      toast('E-mail enviado com sucesso!', {
+
+      toast('Mensagem enviada com sucesso!', {
         style: {
           background: theme.secondary,
           color: '#fff'
         }
       });
-    } catch {
+    } catch (error) {
       toast('Ocorreu um erro ao tentar enviar sua mensagem. Tente novamente!', {
         style: {
           background: theme.error,
@@ -48,31 +50,26 @@ export default function Form() {
   }
 
   return (
-    <FormContainer data-aos="fade-up">
-      <form onSubmit={handleSubmit}>
-        <Input
-          placeholder="Nome"
-          value={nome}
-          onChange={({ target }) => setNome(target.value)}
-          required
-        />
-        <Input
-          placeholder="E-mail"
-          type="email"
-          required
-          value={email}
-          onChange={({ target }) => setEmail(target.value)}
-        />
-        <TextArea
-          placeholder="Mensagem"
-          required
-          value={mensagem}
-          onChange={({ target }) => setMensagem(target.value)}
-        />
-        <button disabled={loading} type="submit">
-          ENVIAR
-        </button>
-      </form>
+    <FormContainer data-aos="fade-up" onSubmit={handleSubmit}>
+      <Input
+        placeholder="Nome"
+        value={nome}
+        onChange={({ target }) => setNome(target.value)}
+      />
+      <Input
+        placeholder="E-mail"
+        type="email"
+        value={email}
+        onChange={({ target }) => setEmail(target.value)}
+      />
+      <TextArea
+        placeholder="Mensagem"
+        value={mensagem}
+        onChange={({ target }) => setMensagem(target.value)}
+      />
+      <button type="submit" disabled={loading}>
+        ENVIAR
+      </button>
     </FormContainer>
   );
 }

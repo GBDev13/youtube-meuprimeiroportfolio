@@ -78,11 +78,11 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
     margin: 0 0 3rem 5rem;
     background: none;
     border: none;
-    font-weight: 300;
 
     a {
       color: #fff;
       font-size: 2rem;
+      font-weight: 300;
       display: flex;
       align-items: center;
       gap: 0.8rem;
@@ -206,16 +206,17 @@ export const ProjetoContainer = styled.div<ProjetoProps>`
   @media (max-width: 450px) {
     > button {
       height: auto;
+
       a {
         font-size: 1.5rem;
         gap: 0.8rem;
       }
     }
+
     > section > div.text {
       h1 {
         font-size: 1.5rem;
       }
-
       h2 {
         font-size: 1rem;
       }

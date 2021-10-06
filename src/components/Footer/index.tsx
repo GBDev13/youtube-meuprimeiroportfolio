@@ -6,12 +6,11 @@ import {
 import { Container } from './styles';
 
 function Footer() {
-  function handleRedirect(url) {
+  function handleRedirect(url: string) {
     window.open(url);
   }
 
   function handleScrollTop() {
-    // scroll.scrollToTop();
     window.scroll({
       top: 0,
       behavior: 'smooth'

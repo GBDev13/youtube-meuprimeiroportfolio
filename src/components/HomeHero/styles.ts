@@ -21,6 +21,7 @@ export const Container = styled.section`
     > img {
       width: 30rem;
     }
+
     > div {
       flex: 1;
     }
@@ -99,8 +100,6 @@ export const CodeItem = styled.pre`
 
   @media (max-width: 1000px) {
     width: 100%;
-    padding: 1.5rem;
-    font-size: 0.8rem;
   }
 
   &:hover {

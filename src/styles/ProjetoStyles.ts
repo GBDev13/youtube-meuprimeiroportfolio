@@ -33,8 +33,8 @@ export const ProjetoContainer = styled.div`
       }
 
       a {
-        text-transform: uppercase;
         color: #fff;
+        text-transform: uppercase;
         font-size: 1.5rem;
         font-weight: 300;
       }
@@ -49,6 +49,7 @@ export const ProjetoContainer = styled.div`
 
       button {
         padding: 0.7rem 2rem;
+
         a {
           font-size: 0.9rem;
         }

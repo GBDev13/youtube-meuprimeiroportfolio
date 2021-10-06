@@ -1,49 +1,42 @@
 import { darken } from 'polished';
 import styled from 'styled-components';
 
-export const Container = styled.section`
-  width: 100%;
-`;
+export const Container = styled.section``;
 
-export const FormContainer = styled.section`
+export const FormContainer = styled.form`
   margin-top: 8rem;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 
-  > form {
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr 1fr;
+  > button {
+    border: none;
+    padding: 1rem 2.5rem;
+    color: #fff;
+    font-weight: 300;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    background: ${({ theme }) => theme.primary};
+    transition: 0.5s;
+    width: fit-content;
 
-    > button {
-      border: none;
-      padding: 1rem 2.5rem;
-      color: #fff;
-      font-weight: 300;
-      font-size: 1.2rem;
-      border-radius: 0.5rem;
-      background: ${({ theme }) => theme.primary};
-      transition: 0.5s;
-      width: fit-content;
+    &:disabled {
+      opacity: 0.5;
+    }
 
-      &:disabled {
-        opacity: 0.5;
-      }
-
-      &:not(:disabled):hover {
-        background: ${({ theme }) => darken(0.05, theme.primary)};
-      }
+    &:not(:disabled):hover {
+      background: ${({ theme }) => darken(0.05, theme.primary)};
     }
   }
 
   @media (max-width: 700px) {
     margin-top: 5rem;
-    > form {
-      grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
   }
 
   @media (max-width: 450px) {
-    > form > button {
+    > button {
       padding: 0.8rem 1.5rem;
       font-size: 1rem;
     }
@@ -91,6 +84,14 @@ export const TextArea = styled.textarea`
 
   grid-column: 1 / 3;
 
+  &:focus {
+    border-color: ${({ theme }) => theme.primary};
+  }
+
+  &::placeholder {
+    color: ${({ theme }) => theme.primary};
+  }
+
   @media (max-width: 700px) {
     grid-column: 1;
   }
@@ -98,13 +99,5 @@ export const TextArea = styled.textarea`
   @media (max-width: 450px) {
     padding: 1.4rem;
     font-size: 1rem;
-  }
-
-  &:focus {
-    border-color: ${({ theme }) => theme.primary};
-  }
-
-  &::placeholder {
-    color: ${({ theme }) => theme.primary};
   }
 `;

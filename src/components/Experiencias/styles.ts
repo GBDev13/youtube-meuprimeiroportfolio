@@ -7,7 +7,6 @@ export const Container = styled.section`
     width: 100%;
     margin-top: 7rem;
     display: flex;
-    width: 100%;
     gap: 1.5rem;
 
     padding-bottom: 8rem;
@@ -20,13 +19,12 @@ export const Container = styled.section`
     @media (max-width: 700px) {
       flex-direction: column;
       margin-top: 5rem;
-      gap: 2;
+      gap: 2rem;
     }
   }
 `;
 
 export const ItemContainer = styled.div`
-  transition: 1s !important;
   > div {
     background: ${({ theme }) => theme.gradient};
     padding: 1rem;
@@ -36,6 +34,8 @@ export const ItemContainer = styled.div`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+
+    max-width: 19rem;
 
     transition: 0.5s;
 
@@ -72,6 +72,7 @@ export const ItemContainer = styled.div`
     > div {
       height: 15rem;
       padding-top: 1.5rem;
+
       h1 {
         font-size: 1.2rem;
         margin-bottom: 1rem;
@@ -79,7 +80,6 @@ export const ItemContainer = styled.div`
 
       h2 {
         font-size: 1rem;
-        margin-bottom: 1rem;
       }
 
       p {
@@ -92,6 +92,7 @@ export const ItemContainer = styled.div`
     &:nth-child(even) > div {
       margin-top: 0;
     }
+
     &:hover > div {
       transform: translateY(0);
     }
@@ -99,13 +100,16 @@ export const ItemContainer = styled.div`
     > div {
       height: auto;
       padding: 2rem;
+      max-width: 100%;
+
       h1 {
         font-size: 2rem;
       }
+
       h2 {
         font-size: 1.5rem;
-        margin-bottom: 1rem;
       }
+
       p {
         font-size: 1rem;
       }

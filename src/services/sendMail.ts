@@ -12,15 +12,7 @@ export const sendContactMail = async (
   };
 
   try {
-    const res = await axios({
-      method: 'post',
-      url: '/api/contact',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      data
-    });
-    return res;
+    return await axios.post('/api/contact', data);
   } catch (error) {
     return error;
   }

@@ -32,7 +32,7 @@ const mailer = ({ senderMail, name, text }) => {
   const message = {
     from,
     to: `${email}`,
-    subject: `Nova mensagem de contato -  ${name}`,
+    subject: `Nova mensagem de contato - ${name}`,
     text,
     replyTo: from
   };
@@ -48,7 +48,7 @@ export default async (req, res) => {
   const { senderMail, name, content } = req.body;
 
   if (senderMail === '' || name === '' || content === '') {
-    res.status(403).send('');
+    res.status(403).send();
     return;
   }
 

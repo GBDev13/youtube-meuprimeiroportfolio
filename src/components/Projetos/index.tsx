@@ -25,10 +25,10 @@ function Projetos({ projetos }: ProjetosProps) {
         {projetos.slice(0, 3).map(projeto => (
           <ProjetoItem
             key={projeto.slug}
+            img={projeto.thumbnail}
             title={projeto.title}
             type={projeto.type}
             slug={projeto.slug}
-            img={projeto.thumbnail}
           />
         ))}
       </section>
