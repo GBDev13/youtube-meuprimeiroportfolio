@@ -1,57 +1,40 @@
-/* eslint-disable @typescript-eslint/naming-convention */
 import nodemailer from 'nodemailer';
-import { google } from 'googleapis';
-
-const { OAuth2 } = google.auth;
+import sendgridTransport from 'nodemailer-sendgrid-transport';
+import { NextApiRequest, NextApiResponse } from 'next';
 
 const email = process.env.MAILADRESS;
 
-const clientId = process.env.CLIENT_ID;
-const clientSecret = process.env.CLIENT_SECRET;
-const refreshToken = process.env.REFRESH_TOKEN;
+const transporter = nodemailer.createTransport(
+  sendgridTransport({
+    auth: {
+      api_key: process.env.SENDGRID_API_KEY
+    }
+  })
+);
 
-const OAuth2_client = new OAuth2(clientId, clientSecret);
-OAuth2_client.setCredentials({ refresh_token: refreshToken });
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  try {
+    const { senderMail, name, content } = req.body;
 
-const accessToken = OAuth2_client.getAccessToken();
+    if (!senderMail.trim() || !name.trim() || !content.trim()) {
+      return res.status(403).send('');
+    }
 
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    type: 'OAuth2',
-    user: email,
-    clientId,
-    clientSecret,
-    refreshToken,
-    accessToken
+    const message = {
+      from: email,
+      to: email,
+      subject: `Nova mensagem de contato - ${name}`,
+      html: `<p><b>Email:</b> ${senderMail}<br /><b>Mensagem:</b> ${content}</p>`,
+      replyTo: senderMail
+    };
+
+    transporter.sendMail(message);
+
+    return res.send('');
+  } catch (err) {
+    return res.json({
+      error: true,
+      message: err.message
+    });
   }
-});
-
-const mailer = ({ senderMail, name, text }) => {
-  const from = `${name} <${senderMail}>`;
-  const message = {
-    from,
-    to: `${email}`,
-    subject: `Nova mensagem de contato - ${name}`,
-    text,
-    replyTo: from
-  };
-
-  return new Promise((resolve, reject) => {
-    transporter.sendMail(message, (error, info) =>
-      error ? reject(error) : resolve(info)
-    );
-  });
-};
-
-export default async (req, res) => {
-  const { senderMail, name, content } = req.body;
-
-  if (senderMail === '' || name === '' || content === '') {
-    res.status(403).send();
-    return;
-  }
-
-  const mailerRes = await mailer({ senderMail, name, text: content });
-  res.send(mailerRes);
 };
