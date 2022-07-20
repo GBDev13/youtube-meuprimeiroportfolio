@@ -28,7 +28,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       replyTo: senderMail
     };
 
-    transporter.sendMail(message);
+    await transporter.sendMail(message);
 
     return res.send('');
   } catch (err) {
